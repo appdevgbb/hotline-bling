@@ -35,7 +35,7 @@ class Payload(BaseModel):
 
 async def get_paper(paper_url):
     """
-    Downloads a paper from it's arxiv page and returns
+    Downloads a paper from url and returns
     the local path to that file.
     """
     downloaded_paper = wget.download(paper_url)
