@@ -5,6 +5,7 @@ import pathlib
 import pdfplumber
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import RedirectResponse
 from pydantic import BaseSettings, BaseModel
 
 
@@ -66,6 +67,12 @@ async def generate_tldr(content):
 @app.get("/health")
 async def health():
     return {"status": "Ok"}
+
+
+# Redirect home to docs
+@app.get("/")
+async def docs_redirect():
+    return RedirectResponse(url='/docs')
 
 
 # Generate a tldr for a pdf paper
