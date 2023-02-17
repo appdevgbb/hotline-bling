@@ -1,0 +1,7 @@
+### Generate tldr for a pdf url
+POST https://localhost:8000/tldr
+Content-Type: application/json
+
+{
+    "paper_url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000039911/ce1bcae5-b55c-4fab-af3d-a97ae4f94125.pdf"
+}
